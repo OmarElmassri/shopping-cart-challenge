@@ -1,0 +1,29 @@
+{
+  "name": "shopping-cart-shared",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Omar Elmassri <okmassri@gmail.com>",
+  "homepage": "https://github.com/OmarElmassri/shopping-cart-challenge#readme",
+  "license": "ISC",
+  "main": "lib/shopping-cart-shared.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarElmassri/shopping-cart-challenge.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/OmarElmassri/shopping-cart-challenge/issues"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
