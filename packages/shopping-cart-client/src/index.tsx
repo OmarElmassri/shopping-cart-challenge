@@ -7,10 +7,14 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.scss";
 // Main app
 import App from "./App";
+// Language
+import "./utils/i18n";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </BrowserRouter>,
   document.getElementById("root")
 );

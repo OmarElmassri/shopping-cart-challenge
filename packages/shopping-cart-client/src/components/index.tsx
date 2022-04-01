@@ -1,7 +1,8 @@
 import React from "react";
+import TextItem from "./common/text/TextItem";
 
 const Home = () => {
-  return <h1>Home</h1>;
+  return <TextItem content="header" classes="sparag-med" />;
 };
 
 export default Home;
