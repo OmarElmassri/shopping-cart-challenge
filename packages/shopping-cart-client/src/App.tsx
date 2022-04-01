@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import "./App.less";
 // Themes
 import { ThemeProvider } from "@material-ui/core/styles";
 import { theme } from "./layout/MUIstyles";

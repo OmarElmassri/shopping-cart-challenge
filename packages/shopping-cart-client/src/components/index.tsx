@@ -1,8 +1,12 @@
 import React from "react";
-import TextItem from "./common/text/TextItem";
+import Navbar from "./common/navbar/navbar";
 
 const Home = () => {
-  return <TextItem content="header" classes="sparag-med" />;
+  return (
+    <div className="full-height-vh grey-back">
+      <Navbar />
+    </div>
+  );
 };
 
 export default Home;
