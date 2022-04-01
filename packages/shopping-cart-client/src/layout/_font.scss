@@ -1,0 +1,43 @@
+/// English Font Avenir ///
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 300;
+  src: local("Ubuntu"), url(../fonts/Ubuntu-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  src: local("Ubuntu"), url(../fonts/Ubuntu-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  src: local("Ubuntu"), url(../fonts/Ubuntu-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  src: local("Ubuntu"), url(../fonts/Ubuntu-Bold.ttf) format("truetype");
+}
+
+@mixin fontLine {
+  line-height: 1.1;
+  font-family: "Ubuntu";
+}
+
+.light {
+  @include fontLine;
+  font-weight: 300;
+}
+.medium {
+  @include fontLine;
+  font-weight: 400;
+}
+.heavy {
+  @include fontLine;
+  font-weight: 700;
+}
+.blacked {
+  @include fontLine;
+  font-weight: 800;
+}
