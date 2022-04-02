@@ -37,6 +37,8 @@
 .card {
   @extend .shadow;
   @extend .relative;
+  @extend .white-back;
+  @extend .fit-content;
 }
 
 //// Media Queries ////

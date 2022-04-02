@@ -3,6 +3,7 @@ import { Product } from "../../../assets/const/products";
 import ImageComponent from "../../common/image/image";
 import TextItem from "../../common/text/TextItem";
 import { Resize, Shape } from "../../common/types";
+import ProductCart from "./productCart";
 import ProductPrice from "./productPrice";
 
 interface ProductCardProps {
@@ -11,7 +12,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
-    <div key={product.id} className="shadow white-back">
+    <div key={product.id} className="card">
       <div className="full-width" style={{ height: 200 }}>
         <ImageComponent
           image={product.imageUrl}
@@ -33,6 +34,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           normal
           classes="micro-lit text-left"
         />
+        <ProductCart product={product} />
       </div>
     </div>
   );

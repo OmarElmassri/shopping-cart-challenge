@@ -3,5 +3,17 @@
   "products": "Our Products",
   "cart": "My Cart",
   "price": "{{value}} EGP",
-  "discount": "- {{value}} %"
+  "discount": "- {{value}} %",
+  "add-to-cart": "Add to Cart",
+  "order": "My Order",
+  "payment": "Payment Summary",
+  "coupon-code": "Coupon Code",
+  "enter-coupon": "Enter coupon code here",
+  "apply": "Apply",
+  "order-summary": "Order Summary",
+  "tax": "Tax 14%",
+  "total": "Total Amount",
+  "checkout": "Checkout",
+  "empty-order": "Your Order is Empty",
+  "add-items": "Add Items"
 }

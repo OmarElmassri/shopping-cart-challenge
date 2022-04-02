@@ -33,7 +33,7 @@ export const products: Product[] = [
   {
     id: '4',
     name: "Hunterspider V4 Gaming Headset",
-    description: "This Professional Wired Gaming Headset is a primary kind of gaming headset for PlayStation 4, Xbox one and PC Games which brings you vivid sound",
+    description: "This Professional Wired Gaming Headset is a primary kind of gaming headset for PlayStation 4, Xbox one and PC Games",
     price: 1000,
     imageUrl: "https://dmjezjhu3we3n.cloudfront.net/Hunterspider-V4-Gaming-Headset.jpeg"
   },
