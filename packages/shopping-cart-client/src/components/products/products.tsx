@@ -1,14 +1,17 @@
 import React from "react";
-import { Product, products } from "../../assets/const/products";
+// Helpers
+import { IProduct } from "shopping-cart-shared";
+import { products } from "../../assets/const/products";
+// Components
 import TextItem from "../common/text/TextItem";
 import ProductCard from "./helpers/productCard";
 
-const Products = () => {
+const Products: React.FunctionComponent = () => {
   return (
     <div className="single-grid">
       <TextItem content="products" classes="slabel-hev" />
       <div className="triple-grid">
-        {products.map((product: Product) => {
+        {products.map((product: IProduct) => {
           return <ProductCard product={product} />;
         })}
       </div>

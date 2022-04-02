@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { ICart } from "shopping-cart-shared";
 
 ///////////////////////////////
 // Cart Context
 ///////////////////////////////
 type CartProps = {
-  cart: any;
-  products: any;
+  cart: ICart[];
+  setCart: (cartItems: ICart[]) => void;
 };
 const CartContext = React.createContext({} as CartProps);
 
@@ -14,13 +15,10 @@ const CartContext = React.createContext({} as CartProps);
 ///////////////////////////////
 const CartProvider = (props: any) => {
   const [cart, setCart] = useState<any>([]);
-  const [products, setProducts] = useState<any>([]);
 
   const cartContextValue = {
     cart,
     setCart,
-    products,
-    setProducts,
   };
 
   return <CartContext.Provider value={cartContextValue} {...props} />;

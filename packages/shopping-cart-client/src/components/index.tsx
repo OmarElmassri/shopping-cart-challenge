@@ -1,11 +1,14 @@
 import React from "react";
-import Navbar from "./common/navbar/navbar";
+// Packages
 import { Route, Router, Switch } from "react-router-dom";
+// Helpers
 import history from "../utils/history";
+// Components
+import Navbar from "./common/navbar/navbar";
 import Products from "./products/products";
 import ShoppingCart from "./cart/cart";
 
-const Home = () => {
+const Home: React.FunctionComponent = () => {
   return (
     <div className="full-height-vh grey-back">
       <Navbar />

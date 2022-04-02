@@ -1,10 +1,12 @@
 import React from "react";
-import { GetIcon } from "../../../assets/IconGenerator";
+// Helpers
 import history from "../../../utils/history";
+// Components
+import { GetIcon } from "../../../assets/IconGenerator";
 import TextItem from "../text/TextItem";
 import CartCounter from "./helpers/cartCounter";
 
-const Navbar = () => {
+const Navbar: React.FunctionComponent = () => {
   return (
     <div className="white-back shadow">
       <div className="full-container vertical-med-padd flex-nowrap justify-space-between">

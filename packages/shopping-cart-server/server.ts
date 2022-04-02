@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import './config/db';
 // Routers import
-import ProductRouter from './services/product';
+import CartRouter from './services/cart';
 
 const app = express();
 const port = 3001;
@@ -11,7 +11,7 @@ const port = 3001;
 app.use(cors())
 
 // App endpoints
-app.use('/product', ProductRouter);
+app.use('/cart', CartRouter);
 
 app.get("/data", (req, res) => {
   res.json({ foo: "bar" });

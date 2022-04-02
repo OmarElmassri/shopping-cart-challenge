@@ -1,16 +1,16 @@
 import React from "react";
-import { Product } from "../../../assets/const/products";
+// Helpers
 import {
   calculateDiscount,
   numberWithCommas,
 } from "../../../utils/helperFunctions";
+import { ProductCardProps } from "../../common/interfaces";
+// Components
 import TextItem from "../../common/text/TextItem";
 
-interface ProductPriceProps {
-  product: Product;
-}
-
-const ProductPrice = ({ product }: ProductPriceProps) => {
+const ProductPrice: React.FunctionComponent<ProductCardProps> = ({
+  product,
+}: ProductCardProps) => {
   return (
     <div className="flex justify-start">
       {product.discount && (

@@ -1,7 +1,7 @@
 import React from "react";
 // Packages
 import { Skeleton } from "antd";
-import { Shape } from "../types";
+import { Shape } from "../interfaces";
 
 interface AvatarSkeletonProps {
   fill?: boolean;

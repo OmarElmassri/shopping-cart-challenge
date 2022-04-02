@@ -1,18 +1,17 @@
 import React from "react";
-import { Product } from "../../../assets/const/products";
+// Helpers
+import { ProductCardProps, Resize, Shape } from "../../common/interfaces";
+// Components
 import ImageComponent from "../../common/image/image";
 import TextItem from "../../common/text/TextItem";
-import { Resize, Shape } from "../../common/types";
 import ProductCart from "./productCart";
 import ProductPrice from "./productPrice";
 
-interface ProductCardProps {
-  product: Product;
-}
-
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard: React.FunctionComponent<ProductCardProps> = ({
+  product,
+}: ProductCardProps) => {
   return (
-    <div key={product.id} className="card">
+    <div key={product.itemId} className="card">
       <div className="full-width" style={{ height: 200 }}>
         <ImageComponent
           image={product.imageUrl}

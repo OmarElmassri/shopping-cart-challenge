@@ -1,3 +1,5 @@
+import { IProduct } from "shopping-cart-shared";
+
 export interface Tag {
   icon: string;
   size?: string;
@@ -11,4 +13,8 @@ export enum Shape {
 export enum Resize {
   cover = "cover",
   contain = "contain",
+}
+
+export interface ProductCardProps {
+  product: IProduct;
 }
