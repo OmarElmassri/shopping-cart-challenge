@@ -1,3 +1,7 @@
 {
-  "brand": "My-Commerce"
+  "brand": "My-Commerce",
+  "products": "Our Products",
+  "cart": "My Cart",
+  "price": "{{value}} EGP",
+  "discount": "- {{value}} %"
 }

@@ -1,0 +1,13 @@
+.image-component {
+  .ant-image {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    .ant-image-contain {
+      object-fit: contain;
+    }
+    .ant-image-cover {
+      object-fit: cover;
+    }
+  }
+}

@@ -94,6 +94,10 @@
 .text-upper {
   text-transform: uppercase;
 }
+.text-line {
+  text-decoration-line: line-through;
+  text-decoration-style: solid;
+}
 
 // status
 .pending {
