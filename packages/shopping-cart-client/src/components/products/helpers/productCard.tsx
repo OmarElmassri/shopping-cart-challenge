@@ -1,6 +1,6 @@
 import React from "react";
 // Helpers
-import { ProductCardProps, Resize, Shape } from "../../common/interfaces";
+import { ProductCardProps, Resize, Shape } from "../../../utils/interfaces";
 // Components
 import ImageComponent from "../../common/image/image";
 import TextItem from "../../common/text/TextItem";

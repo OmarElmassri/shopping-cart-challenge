@@ -1,5 +1,5 @@
 import React from "react";
-import { Shape } from "../../interfaces";
+import { Shape } from "../../../../utils/interfaces";
 
 interface ImageContainerProps {
   fill?: boolean;

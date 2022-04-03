@@ -4,7 +4,7 @@ import {
   calculateDiscount,
   numberWithCommas,
 } from "../../../utils/helperFunctions";
-import { ProductCardProps } from "../../common/interfaces";
+import { ProductCardProps } from "../../../utils/interfaces";
 // Components
 import TextItem from "../../common/text/TextItem";
 

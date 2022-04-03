@@ -15,5 +15,8 @@
   "total": "Total Amount",
   "checkout": "Checkout",
   "empty-order": "Your Order is Empty",
-  "add-items": "Add Items"
+  "add-items": "Add Items",
+  "error": {
+    "error": "Error, Try again"
+  }
 }

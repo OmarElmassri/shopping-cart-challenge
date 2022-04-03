@@ -1,7 +1,7 @@
 import React from "react";
 // Packages
 import { Image } from "antd";
-import { Resize } from "../../interfaces";
+import { Resize } from "../../../../utils/interfaces";
 
 interface ImageSourceProps {
   source: string;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // Components
 import AvatarSkeleton from "../skeleton/avatarSkeleton";
-import { Resize, Shape, Tag } from "../interfaces";
+import { Resize, Shape, Tag } from "../../../utils/interfaces";
 import ImageContainer from "./helpers/imageContainer";
 import ImageSource from "./helpers/imageSource";
 import ImageTag from "./helpers/imageTag";

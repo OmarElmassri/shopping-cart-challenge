@@ -2,7 +2,7 @@ import React from "react";
 // Components
 import { GetIcon } from "../../../../assets/IconGenerator";
 // Hooks
-import { Tag } from "../../interfaces";
+import { Tag } from "../../../../utils/interfaces";
 
 interface ImageTagProps {
   tag?: Tag;
