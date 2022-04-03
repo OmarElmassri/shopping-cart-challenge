@@ -5,3 +5,7 @@ export function numberWithCommas(number: number): string {
 export function calculateDiscount(number: number, discount: number): number {
   return parseFloat((number - (number * (discount / 100))).toFixed(2));
 }
+
+export function fixedNumber(number: number): number {
+  return parseFloat(number.toFixed(2));
+}

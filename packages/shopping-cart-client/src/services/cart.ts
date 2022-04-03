@@ -13,3 +13,7 @@ export const addCartItem = (apiData: ApiData) => {
 export const removeCartItem = (apiData: ApiData) => {
   putRequest(endpoint + "/", apiData);
 }
+
+export const clearCart = (apiData: ApiData) => {
+  putRequest(endpoint + "/clear", apiData);
+}

@@ -25,7 +25,7 @@ export function HandleApiHook(isFetch?: boolean) {
   const getErrorItem = useCallback(
     (name) => {
       let errorObject: IError | undefined = errors.find((error) => error.path === name);
-      if (!errorObject) return null;
+      if (!errorObject) return undefined;
       return errorObject.error;
     },
     [errors]

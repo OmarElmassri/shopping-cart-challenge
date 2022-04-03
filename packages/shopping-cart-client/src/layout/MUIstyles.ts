@@ -7,10 +7,10 @@ export const theme: Theme = createTheme({
         backgroundColor: "#ddd",
       },
       track: {
-        backgroundColor: "#98c93c",
+        backgroundColor: "#0084ff",
       },
       thumb: {
-        backgroundColor: "#98c93c",
+        backgroundColor: "#0084ff",
       },
     },
     MuiDialog: {
@@ -98,10 +98,10 @@ export const theme: Theme = createTheme({
     },
     MuiCircularProgress: {
       svg: {
-        // color: "#98c93c",
+        // color: "#0084ff",
       },
       circle: {
-        // color: "#98c93c",
+        // color: "#0084ff",
       },
       circleIndeterminate: {
         animation: "unset",
@@ -113,7 +113,7 @@ export const theme: Theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#98c93c",
+      main: "#0084ff",
     },
     secondary: {
       main: "#a70a49",

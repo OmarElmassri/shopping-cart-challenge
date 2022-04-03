@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "compile": "tsc && node dist/server.js",
-    "start": "nodemon -e ts --exec \"yarn compile\""
+    "start": "nodemon -e ts --exec \"yarn compile\"",
+    "coupon:seed": "node seeds/coupon.js"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",

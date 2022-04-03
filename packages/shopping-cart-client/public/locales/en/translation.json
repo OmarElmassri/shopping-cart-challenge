@@ -4,10 +4,12 @@
   "cart": "My Cart",
   "price": "{{value}} EGP",
   "discount": "- {{value}} %",
+  "discount-egp": "- {{value}} EGP",
   "order-discount": "Coupon Discount",
   "add-to-cart": "Add to Cart",
   "order": "My Order",
   "payment": "Payment Summary",
+  "applied-coupon": "Applied Coupon",
   "coupon-code": "Coupon Code",
   "enter-coupon": "Enter coupon code here",
   "apply": "Apply",
@@ -17,7 +19,15 @@
   "checkout": "Checkout",
   "empty-order": "Your Cart is Empty",
   "add-items": "Add Items",
+  "checkout-ques": "Are you sure that you want to checkout?",
+  "checkout-talk": "This will clear your cart. Thanks for choosing MY-COMMERCE we hope that you've enjoyed our journey, hope to see you again ...",
+  "action": {
+    "iam-sure": "I'm Sure",
+    "iam-not": "i'm not"
+  },
   "error": {
-    "error": "Error, Try again"
+    "error": "Error, Try again",
+    "required": "{{field}} is Required",
+    "not-valid": "{{field}} is not Valid"
   }
 }

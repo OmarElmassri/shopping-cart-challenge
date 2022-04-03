@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { ICart } from "shopping-cart-shared";
+// Helpers
+import { ICart, ICoupon } from "shopping-cart-shared";
 import { useCart } from "../../../context/cartContext";
-import { calculateDiscount } from "../../../utils/helperFunctions";
+import { calculateDiscount, fixedNumber } from "../../../utils/helperFunctions";
+import { HandleApiHook } from "../../../utils/hooks";
 // Components
 import NormalButton from "../../common/buttons/normalButton";
+import ConfirmModal from "../../common/modals/confirmModal";
 import TextItem from "../../common/text/TextItem";
 import CouponApply from "./couponApply";
 import PaymentItem from "./paymentItem";
 
 const PaymentSummary: React.FunctionComponent = () => {
   // Context
-  const { cart } = useCart();
+  const { cart, setCart } = useCart();
   // Hooks
+  const { submit } = HandleApiHook();
   const [order, setOrder] = useState<number>(0);
   const [discount, setDiscount] = useState<number>(0);
   const [tax, setTax] = useState<number>(0);
+  const [open, setOpen] = useState<boolean>(false);
+  const [appliedCoupon, setAppliedCoupon] = useState<ICoupon | null>(null);
 
   // Listen to cart
   useEffect(() => {
@@ -25,18 +31,38 @@ const PaymentSummary: React.FunctionComponent = () => {
         ? calculateDiscount(itemPrice, cartItem.discount)
         : itemPrice;
     });
-    setOrder(orderPrice);
-    setTax(orderPrice * 0.14);
+    setOrder(fixedNumber(orderPrice));
+    setTax(fixedNumber(orderPrice * 0.14));
   }, [cart]);
 
   // Apply coupon
-  const applyCoupon = () => {};
+  const applyCoupon = (coupon: ICoupon) => {
+    if (coupon.type === "percentage")
+      setDiscount(fixedNumber(-(order * (coupon.value / 100))));
+    else setDiscount(fixedNumber(-coupon.value));
+  };
+
+  // Clear cart
+  const clearCart = () => {
+    setOpen(false);
+    setCart([]);
+    setAppliedCoupon(null);
+    setDiscount(0);
+    submit({
+      service: clearCart,
+    });
+  };
 
   return (
     <div className="single-grid align-self-start">
       <TextItem content="payment" classes="slabel-hev" />
       <div className="card all-med-padd full-width-imp">
-        <CouponApply applyCoupon={applyCoupon} />
+        <CouponApply
+          applyCoupon={applyCoupon}
+          setDiscount={setDiscount}
+          appliedCoupon={appliedCoupon}
+          setAppliedCoupon={setAppliedCoupon}
+        />
         <div className="hor-div-full vertical-marg"></div>
         <PaymentItem name="order-summary" value={order} />
         <PaymentItem
@@ -48,14 +74,24 @@ const PaymentSummary: React.FunctionComponent = () => {
         <PaymentItem
           name="total"
           classes="top-med-marg"
-          value={order + discount + tax}
+          value={fixedNumber(order + discount + tax)}
         />
-        <NormalButton
-          content="checkout"
-          onClick={() => {}}
-          classes="full-width-imp top-med-marg"
-        />
+        {cart.length !== 0 && (
+          <NormalButton
+            content="checkout"
+            disabled={cart.length === 0}
+            onClick={() => setOpen(true)}
+            classes="full-width-imp top-med-marg"
+          />
+        )}
       </div>
+      <ConfirmModal
+        open={open}
+        setOpen={setOpen}
+        title="checkout-ques"
+        talk="checkout-talk"
+        onAgree={clearCart}
+      />
     </div>
   );
 };

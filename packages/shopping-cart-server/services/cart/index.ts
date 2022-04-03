@@ -1,5 +1,5 @@
 import express from 'express';
-import { addCartItem, getCartItems, removeCartItem } from './cartController';
+import { addCartItem, clearCart, getCartItems, removeCartItem } from './cartController';
 const router = express.Router();
 
 // Get catr items
@@ -10,5 +10,8 @@ router.post('/', addCartItem);
 
 // Remove cart item
 router.put('/', removeCartItem);
+
+// Clear cart
+router.put('/clear', clearCart);
 
 export default router;

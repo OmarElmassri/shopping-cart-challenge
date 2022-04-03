@@ -36,3 +36,8 @@ export const removeCartItem = async (req: Request, res: Response) => {
 
   return res.status(200).send('Done');
 }
+
+export const clearCart = async (req: Request, res: Response) => {
+  await CartModel.deleteMany();
+  return res.status(200).send('Done');
+}
