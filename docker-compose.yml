@@ -3,13 +3,12 @@ services:
   shopping-cart-app:
     container_name: shopping-cart
     image: shopping-cart:latest
-    ports:
-      - 3000:3000
-      - 3001:3001
+    network_mode: host
+    depends_on:
+      - mongo
   
   mongo:
     container_name: mongoDB
     image: mongo:latest
+    network_mode: host
     restart: unless-stopped
-    ports:
-      - 27017:27017

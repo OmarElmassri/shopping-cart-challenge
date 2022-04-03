@@ -64,6 +64,8 @@ In order to use coupons you have to seed some coupones into the database. There 
 from the root directory of the project
 
 ```bash
+yarn install
+
 cd packages/shopping-cart-server
 
 yarn coupon:seed
