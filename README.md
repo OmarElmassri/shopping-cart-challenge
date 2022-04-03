@@ -4,7 +4,7 @@ Simple application that manages shopping cart and allow users to add, remove and
 
 # Application Structure
 
-Monorepo managed by Lerna and yarn workspaces containing app client (ReactJS), app server (NodeJS) and shared package containing common interfaces used by the application. Images are stored in S3 bucket and retreived by cloudfront to benefit fron caching.
+Monorepo managed by Lerna and yarn workspaces containing app client (ReactJS), app server (NodeJS) and shared package containing common interfaces used by the application. Images are stored in S3 bucket and retreived by cloudfront to benefit from caching.
 
 # Usage
 
