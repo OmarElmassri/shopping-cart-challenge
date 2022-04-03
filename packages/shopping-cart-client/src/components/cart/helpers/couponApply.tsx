@@ -65,7 +65,7 @@ const CouponApply = ({
     );
 
   return (
-    <div className="flex-nowrap align-end">
+    <div className="single-grid">
       <HeadTextField
         value={coupon}
         onChange={setCoupon}
@@ -74,13 +74,13 @@ const CouponApply = ({
         innerPlace="enter-coupon"
       />
       {loading ? (
-        <CircleLoader size="small" classes="start-med-marg" />
+        <CircleLoader size="small" classes="justify-self-end" />
       ) : (
         <NormalButton
           content="apply"
           onClick={checkCoupon}
           second
-          classes="start-med-marg"
+          classes="justify-self-end"
         />
       )}
     </div>

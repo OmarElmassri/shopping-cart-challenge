@@ -14,9 +14,11 @@ const ShoppingCart: React.FunctionComponent = () => {
   const { cart } = useCart();
 
   return (
-    <div className="third-grid">
+    <div className="third-grid bottom-extend">
       <div className="single-grid align-self-start">
-        <TextItem content="order" classes="slabel-hev" />
+        <div className="noncard-container">
+          <TextItem content="order" classes="slabel-hev" />
+        </div>
         <div className="card all-med-padd full-width-imp">
           {cart.length === 0 ? (
             <EmptyForm

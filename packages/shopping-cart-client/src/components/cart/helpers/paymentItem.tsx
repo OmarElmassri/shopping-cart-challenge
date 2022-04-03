@@ -17,11 +17,11 @@ const PaymentItem: React.FunctionComponent<IPaymentItemProps> = ({
 }: IPaymentItemProps) => {
   return (
     <div className={`flex-nowrap justify-space-between ${classes}`}>
-      <TextItem content={name} classes={`tiny-med ${textClasses}`} />
+      <TextItem content={name} classes={`micro-med ${textClasses}`} />
       <TextItem
         content="price"
         params={{ value: numberWithCommas(value) ?? "0" }}
-        classes={`tiny-hev ${textClasses}`}
+        classes={`micro-hev ${textClasses}`}
       />
     </div>
   );

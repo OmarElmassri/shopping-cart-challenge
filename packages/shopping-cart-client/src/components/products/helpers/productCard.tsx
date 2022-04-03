@@ -11,7 +11,7 @@ const ProductCard: React.FunctionComponent<ProductCardProps> = ({
   product,
 }: ProductCardProps) => {
   return (
-    <div key={product.itemId} className="card">
+    <div key={product.itemId} className="card full-height-imp">
       <div className="full-width" style={{ height: 200 }}>
         <ImageComponent
           image={product.imageUrl}

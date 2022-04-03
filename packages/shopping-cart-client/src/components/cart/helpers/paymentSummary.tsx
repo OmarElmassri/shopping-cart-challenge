@@ -55,7 +55,9 @@ const PaymentSummary: React.FunctionComponent = () => {
 
   return (
     <div className="single-grid align-self-start">
-      <TextItem content="payment" classes="slabel-hev" />
+      <div className="noncard-container">
+        <TextItem content="payment" classes="slabel-hev" />
+      </div>
       <div className="card all-med-padd full-width-imp">
         <CouponApply
           applyCoupon={applyCoupon}
