@@ -3,9 +3,9 @@ import React from "react";
 import { ProductCardProps, Resize, Shape } from "../../../utils/interfaces";
 // Components
 import ImageComponent from "../../common/image/image";
+import PriceComponent from "../../common/price/price";
 import TextItem from "../../common/text/TextItem";
 import ProductCart from "./productCart";
-import ProductPrice from "./productPrice";
 
 const ProductCard: React.FunctionComponent<ProductCardProps> = ({
   product,
@@ -27,7 +27,7 @@ const ProductCard: React.FunctionComponent<ProductCardProps> = ({
           normal
           classes="sparag-med text-left"
         />
-        <ProductPrice product={product} />
+        <PriceComponent price={product.price} discount={product.discount} />
         <TextItem
           content={product.description}
           normal

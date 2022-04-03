@@ -37,7 +37,7 @@ const TextItem = ({
       });
     }
     setTextValue(normal ? content : t(content, { ...translatedParams }));
-  }, [content, normal, language]);
+  }, [content, normal, language, params]);
 
   // Render text content
   const textContent = () => {

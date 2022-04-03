@@ -4,6 +4,7 @@
   "cart": "My Cart",
   "price": "{{value}} EGP",
   "discount": "- {{value}} %",
+  "order-discount": "Coupon Discount",
   "add-to-cart": "Add to Cart",
   "order": "My Order",
   "payment": "Payment Summary",
@@ -14,7 +15,7 @@
   "tax": "Tax 14%",
   "total": "Total Amount",
   "checkout": "Checkout",
-  "empty-order": "Your Order is Empty",
+  "empty-order": "Your Cart is Empty",
   "add-items": "Add Items",
   "error": {
     "error": "Error, Try again"

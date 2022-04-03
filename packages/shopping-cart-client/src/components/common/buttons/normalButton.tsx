@@ -24,7 +24,7 @@ const NormalButton = ({
 }: NormalButtonProps) => {
   // Classes
   const buttonClasses = `flex fit-content outline-none box-sm-padd ${
-    disabled ? "normal-btn-dis forbid" : "normal-btn scale-hover pointer"
+    disabled ? "forbid" : "normal-btn scale-hover pointer"
   } ${radial ? "radial-edges" : ""} ${classes} ${
     second ? "brand2-back border-brand2" : "brand-back border-none"
   }`;
@@ -38,7 +38,7 @@ const NormalButton = ({
     >
       <TextItem
         classes={`${
-          disabled ? "disabled" : second ? "brand" : "white"
+          disabled ? "white" : second ? "brand" : "white"
         } side-med-marg sparag-med`}
         content={content}
       />

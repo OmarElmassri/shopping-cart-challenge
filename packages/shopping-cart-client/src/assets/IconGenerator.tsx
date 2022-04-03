@@ -23,7 +23,7 @@ export const GetIcon = ({
     <div
       className={`icon-${size ?? "tiny"} ${
         color ? color : name ? "brand" : "second"
-      }-back ${disabled && "icon-disabled"} ${classes}`}
+      }-back ${classes}`}
       onClick={onClick}
       style={{
         WebkitMask: `url(/assets/icons/${

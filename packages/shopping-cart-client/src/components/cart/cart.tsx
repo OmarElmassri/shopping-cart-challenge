@@ -1,40 +1,44 @@
 import React from "react";
+import { ICart } from "shopping-cart-shared";
+import { useCart } from "../../context/cartContext";
+// Helpers
 import history from "../../utils/history";
-import NormalButton from "../common/buttons/normalButton";
+// Components
 import EmptyForm from "../common/empty/empty";
 import TextItem from "../common/text/TextItem";
-import CouponApply from "./helpers/couponApply";
-import PaymentItem from "./helpers/paymentItem";
+import CartItem from "./helpers/cartItem";
+import PaymentSummary from "./helpers/paymentSummary";
 
 const ShoppingCart: React.FunctionComponent = () => {
-  const applyCoupon = () => {};
+  // Context
+  const { cart } = useCart();
+
   return (
     <div className="third-grid">
       <div className="single-grid align-self-start">
         <TextItem content="order" classes="slabel-hev" />
         <div className="card all-med-padd full-width-imp">
-          <EmptyForm
-            title="empty-order"
-            button="add-items"
-            onClick={() => history.push("/")}
-          />
+          {cart.length === 0 ? (
+            <EmptyForm
+              title="empty-order"
+              button="add-items"
+              onClick={() => history.push("/")}
+            />
+          ) : (
+            cart.map((cartItem: ICart, index: number) => {
+              return (
+                <>
+                  <CartItem key={cartItem.itemId} cartItem={cartItem} />
+                  {index + 1 !== cart.length && (
+                    <div className="hor-div-full"></div>
+                  )}
+                </>
+              );
+            })
+          )}
         </div>
       </div>
-      <div className="single-grid align-self-start">
-        <TextItem content="payment" classes="slabel-hev" />
-        <div className="card all-med-padd full-width-imp">
-          <CouponApply applyCoupon={applyCoupon} />
-          <div className="hor-div-full vertical-marg"></div>
-          <PaymentItem name="order-summary" />
-          <PaymentItem name="tax" />
-          <PaymentItem name="total" classes="top-med-marg" />
-          <NormalButton
-            content="checkout"
-            onClick={() => {}}
-            classes="full-width-imp top-med-marg"
-          />
-        </div>
-      </div>
+      <PaymentSummary />
     </div>
   );
 };

@@ -7,6 +7,7 @@ let cartSchema = new Schema<ICart>({
   price: { type: Number, required: true },
   qty: { type: Number, required: true },
   description: { type: String, required: true },
+  imageUrl: { type: String, required: true },
   discount: { type: Number }
 })
 
